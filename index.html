@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joseph's Portfolio</title>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
+    
+    <!--1. This pulls the styled navbar layout from your navbar.css file -->
+    <link rel="stylesheet" href="navbar.css">
 
+    <style>
         body {
             background-color: #121212;
             color: #ffffff;
@@ -18,8 +18,8 @@
             text-align: center;
         }
 
-        h1 {color: #ffffff}
-        p {font-size: 18px; line-height: 1.6;}
+        h1 { color: #ffffff; }
+        p { font-size: 18px; line-height: 1.6; }
         
         .bg-video {
             position: fixed;
@@ -30,130 +30,68 @@
             object-fit: cover;
             z-index: -1;
         }
+
         .content {
             position: relative;
             z-index: 1;
-            padding-top: 100px;
-        }
-        /*  NAVBAR CONTAINER */
-        .navbar {
-            position: fixed;            /* Keep it pinned to the top of the screen while scrolling */
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 70px;               /* Give the bar a consistent height */
-            display: flex;
-            justify-content: space-between; /* Pushes the logo to the left, links to the right */
-            align-items: center;
-            padding: 0 50px;            /* Adds space on the outer left/right edges */
-            box-sizing: border-box;     /* Keeps the padding from throwing off the 100% width */
-            z-index: 100;               /* Ensures it floats safely above everything (even your content) */
-        /*  Frosted Glass Effect */
-            background: rgba(18, 18, 18, 0.7); 
-            backdrop-filter: blur(10px); 
-            -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Subtle dividing line */
-        }
-        
-        .logo {
-            font-size: 1.3rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            color: #ffffff;
-            text-decoration: none; /* Removes the default link underline */
-            transition: color 0.3s ease;
-        }
-        .logo:hover {
-            color: #f57411; /* Turns red when hovered, signaling it is clickable! */
-        }
-        .nav-links a {
-            color: rgba(255, 255, 255, 0.7); /* Slightly dimmed so hover stands out */
-            text-decoration: none;
-            font-weight: 500;
-            margin-left: 30px;          /* Space between each link */
-            font-size: 1rem;
-            transition: all 0.3s ease;  /* Smooth hover transition */
-            position: relative;
+            padding-top: 100px; /* Gives the navbar breathing room */
+            max-width: 900px;
+            margin: 0 auto;
         }
 
-        .nav-links a:hover {
-            color: #ffd53e;             /* Hover accent color */
+        /* Styling for your section cards */
+        section {
+            padding: 60px 20px;
+            background: rgba(30, 30, 30, 0.6);
+            border-radius: 16px;
+            margin: 40px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background-color: #8a530f;
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;                /* Underline expands from left to right on hover! */
-        }
-
-        @media (max-width: 600px) {
-            .navbar {
-                padding: 0 20px;        /* Shrink padding on small screens */
-            }
-            .logo {
-                font-size: 1.1rem;      /* Make logo slightly smaller */
-            }
-            .nav-links a {
-                margin-left: 15px;      /* Bring links closer together */
-                font-size: 0.9rem;
-            }
-        }
+        html { scroll-behavior: smooth; }
     </style>
 </head>
 
 <body>
-  <video autoplay muted loop playsinline class="bg-video">
-    <source src="Images/Background1.mp4" type="video/mp4">
-    <source src="Images/Background1.mov" type="video/quicktime">
-    Your browser does not support the video tag.
-  </video>
+    <video autoplay muted loop playsinline class="bg-video">
+        <source src="Images/Background1.mp4" type="video/mp4">
+        <source src="Images/Background1.mov" type="video/quicktime">
+        Your browser does not support the video tag.
+    </video>
 
-  <header class="navbar">
-    <div class="logo">Joseph's Portfolio</div>
-    <nav class="nav-links">
-        <a href="#About">About</a>
-        <a href="#Socials">Socials</a>
-        <a href="#Gallery">Gallery</a>
-    </nav>
-  </header>
+    <!-- 📍 The dynamic navbar placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- 📝 Main Content Container (Opened Once) -->
+    <div class="content" id="top">
   
-  <div class="content">
-      <h1>Joseph's Portfolio</h1>
-      <p>Welcome to my portfolio website.</p>
+    <h1>Joseph's Portfolio</h1>
+    <p>Welcome to my portfolio website.</p>
+  
+      <!-- About Section (capitalized 'About' to match your navbar link!) -->
+      <section id="About">
+          <h2>About Joseph Feinberg</h2>
+          <p>Welcome to my portfolio website. I am a musician and artist from Columbus, Ohio.</p>
+      </section>
+
+      <!-- Socials Section (capitalized 'Socials' to match navbar link!) -->
+      <section id="Socials">
+          <h2>My Socials</h2>
+          <p>Connect with me on Instagram and YouTube.</p>
+          <!-- Your social links/icons will go here! -->
+      </section>
+
+      <!-- Gallery Section (capitalized 'Gallery' to match navbar link!) -->
+      <section id="Gallery">
+          <h2>My Gallery</h2>
+          <p>Check out my latest visual art and musical tracks.</p>
+          <!-- Your art grid and music players will go here! -->
+      </section>
+
   </div>
-  
-<div class="content" id="top">
 
-    <!-- About Section -->
-    <section id="About">
-        <h2>About Joseph Feinberg</h2>
-        <p>Welcome to my portfolio website. I am a musician and artist from Columbus Ohio.</p>
-    </section>
-
-    <!-- Socials Section -->
-    <section id="Socials">
-        <h2>My Socials</h2>
-        <p>Connect with me on Instagram, and YouTube.</p>
-        <!-- Your social links/icons will go here! -->
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="Gallery">
-        <h2>My Gallery</h2>
-        <p>Check out my latest visual art and musical tracks.</p>
-        <!-- Your art grid and music players will go here! -->
-    </section>
-
-</div>
+    <!-- 🚀 JavaScript to pull in your navbar -->
+    <script src="navbar.js"></script>
 
 </body>
 </html>

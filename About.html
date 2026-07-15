@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Joseph</title>
+    
+    <!--1. This pulls the styled navbar layout from your navbar.css file -->
+    <link rel="stylesheet" href="navbar.css">
+
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {color: #ffffff}
+        p {font-size: 18px; line-height: 1.6;}
+        
+        .bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            padding-top: 100px;
+        }
+        section {
+            padding: 60px 20px;
+            background: rgba(30, 30, 30, 0.6);
+            border-radius: 16px;
+            margin: 40px 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="Images/Background2.mp4" type="video/mp4">
+    <source src="Images/Background2.mov" type="video/quicktime">
+  </video>
+
+  <div id="navbar-placeholder"></div>
+
+  <div class="content">
+      <section>
+          <h1>About Me</h1>
+            <p>My name is Joey and I am a finance graduate from the Fisher College of Business at the Ohio State University. I earned my Bachelor of Science in Business Administration with a Specialization in Finance and a minor in MME [Music, Media, and Enterprise]. I have a passion for business, finance, entrepreneurship, and leadership.</P>
+            <P>I strive to find roles where I can apply my passion for business and leadership. I recently interned at Shore Morgan Young Wealth Strategies, where I gained experience and learned about the world of financial planning. At OSU, I was the president for Ohio State's Rock Music Club, where I helped plan local concerts, events, and meetings.</P>
+            <P>I enjoy working in places where I can contribute and feel apart of the community, and I strive for a future where both my life and workplace can model around that.</P>
+      </section>
+  </div>
+
+    <!-- 🚀 JavaScript to pull in your navbar -->
+    <script src="navbar.js"></script>
+
+</body>
+</html>
