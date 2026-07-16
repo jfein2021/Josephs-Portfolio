@@ -36,7 +36,7 @@
             padding-top: 100px;
         }
         section {
-            padding: 60px 20px;
+            padding: 30px 20px;
             background: rgba(30, 30, 30, 0.6);
             border-radius: 16px;
             margin: 40px 0;
@@ -75,14 +75,14 @@
 
         /* PDF Button (Classic bold look) */
         .pdf-btn {
-            background-color: #ff3e3e;
+            background-color: #de860c;
             color: #ffffff;
-            border: 2px solid #ff3e3e;
+            border: 2px solid #c58429;
         }
 
         .pdf-btn:hover {
             background-color: transparent;
-            color: #ff3e3e;
+            color: #ff8b3e;
             transform: translateY(-3px);
         }
     </style>
@@ -112,6 +112,24 @@
 
     <!-- 🚀 JavaScript to pull in your navbar -->
     <script src="navbar.js"></script>
+
+<div class="content">
+      <section>
+          <h1>My Resume</h1>
+          <p class="subtitle">You can review my professional experience and background directly below.</p>
+          
+          <!-- 📄 This embeds your actual PDF document directly onto the page -->
+          <div class="pdf-wrapper">
+              <object data="Resume/Joseph_Feinberg_Resume.pdf" type="application/pdf" width="100%" height="800px">
+                  <!-- Fallback message in case a browser (like some mobile browsers) blocks embedded PDFs -->
+                  <div class="pdf-fallback">
+                      <p>Your browser is unable to display the PDF inline.</p>
+                      <a href="Resume/Joseph_Feinberg_Resume.pdf" target="_blank" class="view-link">Click here to open the document in a new tab</a>
+                  </div>
+              </object>
+          </div>
+      </section>
+</div>
 
 </body>
 </html>
