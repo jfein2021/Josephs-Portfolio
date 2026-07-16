@@ -1,0 +1,59 @@
+/* ─── 3D GALLERY STYLES ONLY ─── */
+
+.image-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transform: perspective(1000px) rotateY(0deg);
+  transition: transform 0.7s;
+  /* 📍 Added margin to center the gallery and push it down below your text */
+  margin: 150px auto 100px auto; 
+}
+
+.image-container span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: rotateY(calc(var(--i) * 40deg)) translateZ(350px); /* Slightly brought images in to prevent extreme width overflow */
+}
+
+.image-container span img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  border-radius: 8px; /* Smooths out image corners */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Adds a premium depth shadow to each photo */
+}
+
+.btn-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 150px auto; /* Centers buttons and adds space at the bottom of the page */
+  height: 50px;
+}
+
+.btn {
+  position: absolute;
+  background: rgb(220, 123, 20);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#prev {
+  left: 10%;
+}
+
+#next {
+  right: 10%;
+}
+
+.btn:hover {
+  filter: brightness(1.5);
+}
