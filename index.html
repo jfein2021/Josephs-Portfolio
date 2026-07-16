@@ -7,7 +7,9 @@
     
     <!--1. This pulls the styled navbar layout from your navbar.css file -->
     <link rel="stylesheet" href="navbar.css">
-
+    <!-- 🎨 Load the sprite styling in your <head> -->
+    <link rel="stylesheet" href="sprite.css">
+    
     <style>
         body {
             background-color: #121212;
@@ -52,6 +54,8 @@
     </style>
 </head>
 
+
+
 <body>
     <video autoplay muted loop playsinline class="bg-video">
         <source src="Images/Background1.mp4" type="video/mp4">
@@ -65,14 +69,21 @@
     <!-- 📝 Main Content Container (Opened Once) -->
     <div class="content" id="top">
   
-    <h1>Joseph's Portfolio</h1>
-    <p>Welcome to my portfolio website. Here you can find my resume, LinkedIn, and other information. 
+<!-- 🌟 Added the ID here so it can be clicked to trigger the sprite! -->
+      <h1 id="portfolio-title" style="cursor: pointer;">Joseph's Portfolio</h1>    <p>Welcome to my portfolio website. Here you can find my resume, LinkedIn, and other information. 
        I built this website using HTML, CSS, and JavaScript to broaden my skills and showcase my work.</p>
 
   </div>
 
+
+    <div id="sprite-character" class="sprite-container"></div>
+
+
+
     <!-- 🚀 JavaScript to pull in your navbar -->
     <script src="navbar.js"></script>
-
+    <!-- 🏃‍♂️ Load the sprite logic at the bottom of your <body> -->
+    <script src="sprite.js"></script>
+    
 </body>
 </html>
