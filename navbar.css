@@ -69,3 +69,57 @@
                 font-size: 0.9rem;
             }
         }
+
+        /* ==========================================================================
+        ✉️ Dynamic Contact Footer Bar Styling
+        ========================================================================== */
+        /* 1. Force the page to always be at least full screen height */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* 2. Pushes the footer to the bottom of the screen if content is short */
+        .content {
+            flex: 1 0 auto; 
+            position: relative;
+            z-index: 1;
+            padding-top: 100px; /* Space so content doesn't hide under the fixed top navbar */
+        }
+
+        /* 3. The Footer itself (sitting naturally at the very bottom) */
+        .contact-bar {
+            flex-shrink: 0; /* Prevents the footer from squishing */
+            width: 100%;
+            background: rgba(18, 18, 18, 0.9); /* Solid dark background to block out bg-video cleanly */
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255, 255, 255, 0.05); /* Matching top navbar's subtle line */
+            padding: 10px 0;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #cccccc;
+            position: relative;
+            z-index: 2;
+            box-sizing: border-box;
+        }
+
+        .email-link {
+            color: #de860c; 
+            text-decoration: none;
+            font-weight: 600;
+            margin-left: 5px;
+            transition: color 0.2s ease, text-shadow 0.2s ease;
+        }
+
+        .email-link:hover {
+            color: #ff8b3e;
+            text-shadow: 0 0 8px rgba(254, 139, 62, 0.4);
+            text-decoration: underline;
+        }
