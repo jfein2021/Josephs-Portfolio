@@ -1,0 +1,35 @@
+.sprite-container {
+  position: fixed;
+  bottom: 01px;          
+  left: -250px;          /* Hidden off-screen (adjusted for the 200px frame width) */
+  width: 200px;          /* 🌟 Width of ONE single frame (1200px / 6) */
+  height: 200px;         /* 🌟 Height of ONE single frame */
+  background-image: url('Images/spritesheet.png'); 
+  background-repeat: no-repeat;
+  background-size: 1200px 200px; /* 🌟 Stretches the 1000px sheet to 1200px so each frame is exactly 200px */
+  z-index: 999;          
+  pointer-events: none;  
+  image-rendering: pixelated;   /* Keeps the pixel art edges razor-sharp when scaled */
+}
+
+/* 🔄 The "Flipbook" Animation */
+@keyframes playSprite {
+  from { background-position: 0px 0px; }
+  to { background-position: -1200px 0px; } /* 🌟 Shift by the scaled width */
+}
+
+/* 🎥 Class added by JS to trigger the actual animations */
+.sprite-container.walking {
+  animation: playSprite 0.8s steps(6) infinite, 
+             walkAcross 5s linear forwards; 
+}
+
+/* ➡️ The path from left to right */
+@keyframes walkAcross {
+  0% {
+    left: -250px;
+  }
+  100% {
+    left: 100vw; /* Walk completely off the right side of the screen */
+  }
+}
