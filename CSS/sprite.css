@@ -4,7 +4,7 @@
   left: -250px;          /* Hidden off-screen (adjusted for the 200px frame width) */
   width: 200px;          /* 🌟 Width of ONE single frame (1200px / 6) */
   height: 200px;         /* 🌟 Height of ONE single frame */
-  background-image: url('Images/spritesheet.png'); 
+  background-image: url('../Images/spritesheet.png'); 
   background-repeat: no-repeat;
   background-size: 1200px 200px; /* 🌟 Stretches the 1000px sheet to 1200px so each frame is exactly 200px */
   z-index: 999;          
